@@ -10,9 +10,12 @@ const appSlice = createSlice({
        toggleMenu : (state) => {
         state.isMenuOpen = !state.isMenuOpen; // This toggles (reverses) the current state of the menu.
        },
+       closeMenu: (state) => {
+        state.isMenuOpen = false;
+       },
     },
 });
 
 
 export default appSlice.reducer;
-export const {toggleMenu} = appSlice.actions;
+export const {toggleMenu, closeMenu} = appSlice.actions;
